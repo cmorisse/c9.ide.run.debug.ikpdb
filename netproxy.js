@@ -5,7 +5,7 @@
   */
 
 var net = require("net");
-var debuggedProcessHost = "{DEBUGGED_PROCESS_HOST}" || "127.0.0.1";
+var debuggedProcessHost = "{DEBUGGED_PROCESS_HOST}";
 var debuggedProcessPort = parseInt("{DEBUGGED_PROCESS_PORT}", 10);
 
 var debugBuffer = [];

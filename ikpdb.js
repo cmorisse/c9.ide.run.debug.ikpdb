@@ -543,7 +543,7 @@ define(function(require, exports, module) {
             return PROXY.replace(/\/\/.*/g, "")
                         .replace(/[\n\r]/g, "")
                         .replace(/\{DEBUGGED_PROCESS_PORT\}/, (process.runner[0] || process.runner).debugport)
-                        .replace(/\{DEBUGGED_PROCESS_HOST\}/, (process.runner[0] || process.runner).debughost);
+                        .replace(/\{DEBUGGED_PROCESS_HOST\}/, (process.runner[0] || process.runner).debughost || "127.0.0.1");
         }
 
 
