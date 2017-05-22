@@ -55,7 +55,7 @@ var server = net.createServer(function(client) {
 
 // Start listening for browser clients
 server.listen(debuggedProcessPort + 1, "127.0.0.1", function() {
-    console.log("netproxy listening on port " + ( debuggedProcessPort + 1) );
+    //console.log("netproxy listening on port " + ( debuggedProcessPort + 1) );
     start();
 });
 
@@ -69,7 +69,7 @@ function tryConnect(retries, callback) {
     var connection = net.connect(debuggedProcessPort, debuggedProcessHost);
     
     connection.on("connect", function() {
-        // console.log("netproxy connected to debugger");
+        //console.log("netproxy connected to debugger");
         connection.removeListener("error", onError);
         callback(null, connection);
     });
